@@ -22,8 +22,11 @@ const Home = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container" id="top">
             <h1>Posts</h1>
+            <div >
+                <a href="#bottom">Go to Bottom</a>
+            </div>
             <Link to="/add-post">
                 <button>Add a New Post</button>
             </Link>
@@ -37,6 +40,11 @@ const Home = () => {
                         <Link to={`/post/${post.id}`}>View Details</Link>
                     </div>
                 ))}
+
+
+            <div id="bottom" style={{ marginTop: '50px', textAlign: 'center' }}>
+                <a href="#top">Go to Top</a>
+            </div>
         </div>
     );
 };
